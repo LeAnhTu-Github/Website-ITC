@@ -25,3 +25,80 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.imgStyle{
+  @apply bg-gradient-to-r from-blue-500 to-indigo-500 rounded-l-md;
+  position: relative;
+  overflow: hidden;
+}
+
+.cartoonImg{
+  background: url('/images/bgLogin/img2.png') no-repeat;
+  position: absolute;
+  bottom: 0;left: 0;right: 0;top:0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 65% 100px;
+  z-index: 1;
+  border-left: 12px;
+}
+
+.cloud_one{
+  background: url('/images/bgLogin/cloud_1.png') no-repeat;
+  position: absolute;
+  top: 65%; left: 10%;
+  width: 180px;
+  height: 100px;
+  background-size: contain;
+  z-index: 2;
+  transform: translateX(290%);
+  animation: cloud_one 18.5s ease-in 5.9s infinite;
+
+}
+
+.cloud_two{
+  background: url('/images/bgLogin/cloud_2.png') no-repeat;
+  position: absolute;
+  top: 49%;left: 50%;
+  width: 200px;
+  height: 100px;
+  background-size: contain;
+  z-index: 0;
+  transform: translateX(290%);
+  animation: cloud_two 12.5s ease-in .9s infinite;
+}
+
+
+.border-modal{
+  box-shadow: 
+  -28px 27px 37.5px rgba(0,0,0,0.53),
+  10px -19px 37.5px rgba(255,255,255,0.038),
+  inset 4px -4px 8px rgba(0,0,0,0.53),
+  inset -5px 5px 12px #fff
+;
+}
+.border-form{
+  box-shadow: 
+  -28px 27px 37.5px rgba(0,0,0,0.53),
+  10px -19px 37.5px rgba(255,255,255,0.038),
+  inset 4px -4px 8px rgba(0,0,0,0.53),
+  inset -5px 5px 12px #fff
+}
+
+/* css keyframes */
+@keyframes cloud_one{
+  0%{
+      transform: translateX(290%);
+  }100%{
+      transform: translateX(-250%);
+  }
+}
+
+@keyframes cloud_two{
+  0%{
+      transform: translateX(160%);
+  }100%{
+      transform: translateX(-250%);
+  }
+}
